@@ -2,12 +2,12 @@
 
 function runTests(array $tests)
 {
-    foreach ($tests as $test) {
+    foreach ($tests as $id => $test) {
         $testResult = getPartResult($test['storage']);
         if ($testResult === $test['result']) {
-            print "Test {$test['id']} passed." . PHP_EOL;
+            print "Test №$id passed." . PHP_EOL;
         } else {
-            print "Test {$test['id']} failed." . PHP_EOL;
+            print "Test №$id failed." . PHP_EOL;
         }
     }
 }
