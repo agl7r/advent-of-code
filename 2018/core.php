@@ -11,3 +11,12 @@ function runTests(array $tests)
         }
     }
 }
+
+function dump($object)
+{
+    if (is_string($object)) {
+        print $object . PHP_EOL;
+    } else {
+        print_r($object) . PHP_EOL;
+    }
+}
